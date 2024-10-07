@@ -25,17 +25,16 @@ const Skills_Data = [
 	},
 	{
 		s_no: "05",
-		s_name: "Express",
+		s_name: "PostgreSQL",
 		s_desc: "A minimal and flexible Node.js web application framework.",
 		logo: "path/to/express-logo.svg", // Replace with actual path
 	},
 	{
 		s_no: "06",
-		s_name: "MongoDB & PostgreSQL",
+		s_name: "MongoDB ",
 		s_desc: "A NoSQL database for modern applications that require scalability.",
 		logo: "path/to/mongodb-logo.svg", // Replace with actual path
 	},
-	
 ];
 
 export default Skills_Data;

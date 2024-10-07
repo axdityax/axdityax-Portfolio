@@ -35,17 +35,18 @@ const Navbar = () => {
 					</AnchorLink>
 					{menu === "about" ? <img src={underline} alt='' /> : <></>}
 				</li>
-				<li>
-					<AnchorLink className='anchor-link' offset={50} href='#services'>
-						<p onClick={() => setMenu("services")}>Skills</p>
-					</AnchorLink>
-					{menu === "services" ? <img src={underline} alt='' /> : <></>}
-				</li>
+
 				<li>
 					<AnchorLink className='anchor-link' offset={50} href='#work'>
 						<p onClick={() => setMenu("work")}>Projects</p>
 					</AnchorLink>
 					{menu === "work" ? <img src={underline} alt='' /> : <></>}
+				</li>
+				<li>
+					<AnchorLink className='anchor-link' offset={50} href='#services'>
+						<p onClick={() => setMenu("services")}>Skills</p>
+					</AnchorLink>
+					{menu === "services" ? <img src={underline} alt='' /> : <></>}
 				</li>
 				<li>
 					<AnchorLink className='anchor-link' offset={50} href='#contact'>

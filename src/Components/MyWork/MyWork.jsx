@@ -8,18 +8,18 @@ import mywork_data from "../../assets/mywork_data";
 import arrow_icon from "../../assets/arrow_icon.svg";
 
 const MyWork = () => {
-
 	const [activeSlide, setActiveSlide] = useState(0);
-	const sliderRef = useRef(null); 
+	const sliderRef = useRef(null);
+	const titleIntroRef = useRef(null); // Create a ref for the title intro
 
 	// Slider settings
 	const settings = {
 		dots: true,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 1, 
+		slidesToShow: 1,
 		slidesToScroll: 1,
-		initialSlide: activeSlide, 
+		initialSlide: activeSlide,
 		responsive: [
 			{
 				breakpoint: 1024,
@@ -38,19 +38,25 @@ const MyWork = () => {
 		],
 	};
 
-	// Function to handle image click and navigate to that slider project
+	// Function to handle image click and navigate to the title intro
 	const handleImageClick = (index) => {
-		setActiveSlide(index); 
-		sliderRef.current.slickGoTo(index); 
+		setActiveSlide(index);
+		sliderRef.current.slickGoTo(index);
+
+		// Scroll to the title intro
+		if (titleIntroRef.current) {
+			titleIntroRef.current.scrollIntoView({ behavior: "smooth" });
+		}
 	};
 
 	return (
 		<div id='work' className='mywork'>
 			<div className='dummy'></div>
 
-			<div className='title-box'>
+			<div ref={titleIntroRef} className='title-box'>
 				<h1>My Latest Work</h1>
 			</div>
+
 			<div className='title-intro'>
 				<p>
 					Welcome to my projects gallery. Swipe through the projects to see live demos,
@@ -63,19 +69,27 @@ const MyWork = () => {
 					{mywork_data.map((work, index) => (
 						<div key={index} className='work-item'>
 							<img src={work.w_img} alt={work.w_name} />
-							<h3>{work.w_name}</h3>
-							<div className='work-links'>
-								<a href={work.github} target='_blank' rel='noopener noreferrer'>
-									GitHub
-								</a>
-								<hr />
-								<a href={work.videoDemo} target='_blank' rel='noopener noreferrer'>
-									Video
-								</a>
-								<hr />
-								<a href={work.liveDemo} target='_blank' rel='noopener noreferrer'>
-									Live
-								</a>
+							<div className='item-footer'>
+								<div className='footer-name'>{work.w_name}</div>
+								<div className='work-links'>
+									<a href={work.github} target='_blank' rel='noopener noreferrer'>
+										GitHub
+									</a>
+									<hr />
+									<a
+										href={work.videoDemo}
+										target='_blank'
+										rel='noopener noreferrer'>
+										Video
+									</a>
+									<hr />
+									<a
+										href={work.liveDemo}
+										target='_blank'
+										rel='noopener noreferrer'>
+										Live
+									</a>
+								</div>
 							</div>
 						</div>
 					))}
@@ -90,7 +104,7 @@ const MyWork = () => {
 						<div
 							key={index}
 							className='work-item'
-							onClick={() => handleImageClick(index)} // On image click, navigate to the slider
+							onClick={() => handleImageClick(index)} // On image click, navigate to the title intro
 							style={{ cursor: "pointer" }} // Change cursor to pointer on hover
 						>
 							<img src={work.w_img} alt={work.w_name} />
