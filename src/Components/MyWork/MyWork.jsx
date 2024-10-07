@@ -1,27 +1,106 @@
-import React from 'react'
-import './MyWork.css'
-import theme_pattern from '../../assets/theme_pattern.svg'
-import mywork_data from '../../assets/mywork_data'
-import arrow_icon  from '../../assets/arrow_icon.svg'
+import React, { useState, useRef } from "react";
+import Slider from "react-slick";
+import "./MyWork.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import theme_pattern from "../../assets/theme_pattern.svg";
+import mywork_data from "../../assets/mywork_data";
+import arrow_icon from "../../assets/arrow_icon.svg";
 
 const MyWork = () => {
-  return (
-    <div id='work' className='mywork'>
-      <div className="title-box">
-        <h1>My latest work</h1>
-        <img src={theme_pattern} alt="" />
-      </div>
-      <div className="mywork-container">
-        {mywork_data.map((work,index)=>{
-            return <img key={index} src={work.w_img} alt="" />
-        })}
-      </div>
-      <div className="mywork-showmore">
-        <p>Show More</p>
-        <img src={arrow_icon} alt="" />
-      </div>
-    </div>
-  )
-}
 
-export default MyWork
+	const [activeSlide, setActiveSlide] = useState(0);
+	const sliderRef = useRef(null); 
+
+	// Slider settings
+	const settings = {
+		dots: true,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 1, 
+		slidesToScroll: 1,
+		initialSlide: activeSlide, 
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				},
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				},
+			},
+		],
+	};
+
+	// Function to handle image click and navigate to that slider project
+	const handleImageClick = (index) => {
+		setActiveSlide(index); 
+		sliderRef.current.slickGoTo(index); 
+	};
+
+	return (
+		<div id='work' className='mywork'>
+			<div className='dummy'></div>
+
+			<div className='title-box'>
+				<h1>My Latest Work</h1>
+			</div>
+			<div className='title-intro'>
+				<p>
+					Welcome to my projects gallery. Swipe through the projects to see live demos,
+					source code, and more!
+				</p>
+			</div>
+
+			<div className='mywork-slider'>
+				<Slider {...settings} ref={sliderRef}>
+					{mywork_data.map((work, index) => (
+						<div key={index} className='work-item'>
+							<img src={work.w_img} alt={work.w_name} />
+							<h3>{work.w_name}</h3>
+							<div className='work-links'>
+								<a href={work.github} target='_blank' rel='noopener noreferrer'>
+									GitHub
+								</a>
+								<hr />
+								<a href={work.videoDemo} target='_blank' rel='noopener noreferrer'>
+									Video
+								</a>
+								<hr />
+								<a href={work.liveDemo} target='_blank' rel='noopener noreferrer'>
+									Live
+								</a>
+							</div>
+						</div>
+					))}
+				</Slider>
+			</div>
+
+			{/* Static display of all projects */}
+			<div className='all-projects'>
+				<h2>All Projects</h2>
+				<div className='mywork-container'>
+					{mywork_data.map((work, index) => (
+						<div
+							key={index}
+							className='work-item'
+							onClick={() => handleImageClick(index)} // On image click, navigate to the slider
+							style={{ cursor: "pointer" }} // Change cursor to pointer on hover
+						>
+							<img src={work.w_img} alt={work.w_name} />
+							<h3>{work.w_name}</h3>
+						</div>
+					))}
+				</div>
+			</div>
+		</div>
+	);
+};
+
+export default MyWork;
