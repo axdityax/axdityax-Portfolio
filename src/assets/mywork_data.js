@@ -2,8 +2,8 @@ import Prescripto from "../assets/Prescripto.png";
 import Repox from "../assets/Repox.png";
 import Feastify from "../assets/Feastify.png";
 import Nike from "../assets/Nike.png";
-import project5_img from "../assets/project_5.svg";
-import project6_img from "../assets/project_6.svg";
+import PrepFusion from "../assets/PrepFusion.png";
+import ThreadUp from "../assets/ThreadUp.png";
 
 const mywork_data = [
 	{
@@ -23,6 +23,14 @@ const mywork_data = [
 		liveDemo: "https://repox.example.com",
 	},
 	{
+		w_no: 6,
+		w_name: "ThreadUp",
+		w_img: ThreadUp,
+		github: "https://github.com/username/threadup",
+		videoDemo: "https://youtube.com/demo/threadup",
+		liveDemo: "https://threadup.example.com",
+	},
+	{
 		w_no: 3,
 		w_name: "Feastify",
 		w_img: Feastify,
@@ -33,7 +41,7 @@ const mywork_data = [
 	{
 		w_no: 4,
 		w_name: "PrepFusion",
-		w_img: project4_img,
+		w_img: PrepFusion,
 		github: "https://github.com/username/prepfusion",
 		videoDemo: "https://youtube.com/demo/prepfusion",
 		liveDemo: "https://prepfusion.example.com",
@@ -45,14 +53,6 @@ const mywork_data = [
 		github: "https://github.com/username/nike",
 		videoDemo: "https://youtube.com/demo/nike",
 		liveDemo: "https://nike.example.com",
-	},
-	{
-		w_no: 6,
-		w_name: "ThreadUp",
-		w_img: project6_img,
-		github: "https://github.com/username/threadup",
-		videoDemo: "https://youtube.com/demo/threadup",
-		liveDemo: "https://threadup.example.com",
 	},
 ];
 

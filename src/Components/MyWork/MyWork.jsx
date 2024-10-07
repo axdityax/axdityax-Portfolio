@@ -55,6 +55,7 @@ const MyWork = () => {
 
 			<div ref={titleIntroRef} className='title-box'>
 				<h1>My Latest Work</h1>
+				<img src={theme_pattern} alt='' />
 			</div>
 
 			<div className='title-intro'>
@@ -90,9 +91,8 @@ const MyWork = () => {
 										Live
 									</a>
 								</div>
-              </div>
-              
-              <div>sdfsdfds</div>
+							</div>
+
 						</div>
 					))}
 				</Slider>
