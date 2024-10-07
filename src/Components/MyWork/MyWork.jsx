@@ -90,7 +90,9 @@ const MyWork = () => {
 										Live
 									</a>
 								</div>
-							</div>
+              </div>
+              
+              <div>sdfsdfds</div>
 						</div>
 					))}
 				</Slider>
