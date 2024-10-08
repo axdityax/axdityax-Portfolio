@@ -81,7 +81,7 @@ const MyWork = () => {
 												rel='noopener noreferrer'>
 												GitHub
 											</a>
-											<hr />
+											{/* <hr /> */}
 										</>
 									)}
 
@@ -91,19 +91,29 @@ const MyWork = () => {
 												href={work.videoDemo}
 												target='_blank'
 												rel='noopener noreferrer'>
-												Video
+												Video Demo
 											</a>
-											<hr />
+											{/* <hr /> */}
 										</>
 									)}
-
+									{work.admin && (
+										<>
+											<a
+												href={work.admin}
+												target='_blank'
+												rel='noopener noreferrer'>
+												Admin Live
+											</a>
+											{/* <hr /> */}
+										</>
+									)}
 									{work.liveDemo && (
 										<>
 											<a
 												href={work.liveDemo}
 												target='_blank'
 												rel='noopener noreferrer'>
-												Live
+												User Live
 											</a>
 										</>
 									)}

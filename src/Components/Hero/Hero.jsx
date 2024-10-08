@@ -5,7 +5,10 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Hero = () => {
 	const handleResumeClick = () => {
-		window.open("https://github.com/axdityax/axdityax-resume/", "_blank");
+		window.open(
+			"https://drive.google.com/file/d/1gJFP2th3vVcMFi5u3lSSLMFmoJDo2kwf/view?usp=sharing",
+			"_blank"
+		);
 	};
 
 	return (

@@ -11,8 +11,8 @@ const mywork_data = [
 		w_name: "BookMyDoc",
 		w_img: Prescripto,
 		github: "https://github.com/axdityax/BookMyDoc-Prescripto",
-		// videoDemo: "https://youtube.com/demo/prescripto",
-		// liveDemo: "https://prescripto.example.com",
+		admin: "https://bookmydoc-admin.onrender.com/",
+		liveDemo: "https://bookmydoc-frontend.onrender.com/",
 	},
 	{
 		w_no: 2,
@@ -28,6 +28,7 @@ const mywork_data = [
 		w_img: ThreadUp,
 		github: "https://github.com/axdityax/ThreadUp-Clothes-Rescue",
 		videoDemo: "https://drive.google.com/file/d/140IZlEV2jLUmF0uDQaR_hnhG_abMqcZw/view",
+		admin: "https://threadup-admin.onrender.com/",
 		liveDemo: "https://threadup-frontend.onrender.com/",
 	},
 	{
@@ -44,7 +45,7 @@ const mywork_data = [
 		w_img: PrepFusion,
 		github: "https://github.com/axdityap25/PrepFusion",
 		videoDemo: "https://youtube.com/demo/prepfusion",
-		liveDemo: "https://prepfusion.example.com",
+		// liveDemo: "https://prepfusion.example.com",
 	},
 	{
 		w_no: 6,
