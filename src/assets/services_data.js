@@ -1,11 +1,5 @@
 const Skills_Data = [
 	{
-		s_no: "01",
-		s_name: "Tailwind CSS",
-		s_desc: "A utility-first CSS framework for rapid UI development.",
-		logo: "path/to/tailwind-logo.svg", // Replace with actual path
-	},
-	{
 		s_no: "02",
 		s_name: "JavaScript",
 		s_desc: "A versatile programming language for web development and beyond.",
@@ -34,6 +28,12 @@ const Skills_Data = [
 		s_name: "MongoDB ",
 		s_desc: "A NoSQL database for modern applications that require scalability.",
 		logo: "path/to/mongodb-logo.svg", // Replace with actual path
+	},
+	{
+		s_no: "01",
+		s_name: "Tailwind CSS",
+		s_desc: "A utility-first CSS framework for rapid UI development.",
+		logo: "path/to/tailwind-logo.svg", // Replace with actual path
 	},
 ];
 

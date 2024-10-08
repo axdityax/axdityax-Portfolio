@@ -73,26 +73,42 @@ const MyWork = () => {
 							<div className='item-footer'>
 								<div className='footer-name'>{work.w_name}</div>
 								<div className='work-links'>
-									<a href={work.github} target='_blank' rel='noopener noreferrer'>
-										GitHub
-									</a>
-									<hr />
-									<a
-										href={work.videoDemo}
-										target='_blank'
-										rel='noopener noreferrer'>
-										Video
-									</a>
-									<hr />
-									<a
-										href={work.liveDemo}
-										target='_blank'
-										rel='noopener noreferrer'>
-										Live
-									</a>
+									{work.github && (
+										<>
+											<a
+												href={work.github}
+												target='_blank'
+												rel='noopener noreferrer'>
+												GitHub
+											</a>
+											<hr />
+										</>
+									)}
+
+									{work.videoDemo && (
+										<>
+											<a
+												href={work.videoDemo}
+												target='_blank'
+												rel='noopener noreferrer'>
+												Video
+											</a>
+											<hr />
+										</>
+									)}
+
+									{work.liveDemo && (
+										<>
+											<a
+												href={work.liveDemo}
+												target='_blank'
+												rel='noopener noreferrer'>
+												Live
+											</a>
+										</>
+									)}
 								</div>
 							</div>
-
 						</div>
 					))}
 				</Slider>

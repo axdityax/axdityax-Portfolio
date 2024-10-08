@@ -136,23 +136,53 @@
 	margin: 3px;
 	font-weight: 600;
 }
-
+/* Responsive styles */
 @media (max-width: 768px) {
 	.mywork {
 		gap: 50px;
 		margin: 50px 6%;
 		align-items: start;
 	}
+
 	.mywork-container {
 		grid-template-columns: 1fr 1fr;
 		gap: 20px;
 	}
+
 	.mywork-showmore {
 		padding: 15px 30px;
 		font-size: 16px;
 		margin: 10px auto;
 	}
-	.mywork-showmore:hover {
+
+	.mywork-slider {
+		width: 90%; /* Increase slider width for better fit */
+	}
+
+	.footer-name {
+		font-size: 16px; /* Adjust font size for smaller screens */
+	}
+}
+
+@media (max-width: 600px) {
+	.mywork-container {
+		grid-template-columns: 1fr; /* Stack items in a single column */
 		gap: 20px;
+	}
+
+	.work-item {
+		width: 100%; /* Ensure items take full width */
+	}
+
+	.work-item h3 {
+		font-size: 16px; /* Adjust font size */
+	}
+
+	.work-links a {
+		font-size: 12px; /* Smaller font for links */
+	}
+
+	.mywork-slider {
+		width: 100%; /* Full width slider for mobile */
 	}
 }

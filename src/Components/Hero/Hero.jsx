@@ -5,7 +5,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Hero = () => {
 	const handleResumeClick = () => {
-		window.open("https://your-resume-link.com", "_blank");
+		window.open("https://github.com/axdityax/axdityax-resume/", "_blank");
 	};
 
 	return (
